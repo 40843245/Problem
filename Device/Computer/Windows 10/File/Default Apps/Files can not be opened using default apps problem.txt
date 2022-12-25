@@ -1,0 +1,69 @@
+In 2022/12/25, I have met this problem.
+------------------------------------
+Problem:
+When I try to open the scene by double clicking the icon of the scene in File Explorer,
+it can NOT be opened.
+Instead, a window popped, saying what app to open the scene.
+When I selected an app, the Windows 10 does NOT accept my selection.
+
+------------------------------------
+Proceedure:
+Before I downgraded OS to Windows 10 from Windows 11,
+I created an Unity project with some Unity scene files (.unity) 
+with version 2020.3.28f1.
+-- named Unity_CameraLookAt_Project2.
+I could open the scenes via double click of the icon of the Unity scene files (.unity).
+However, after a series of operations.
+First I downgraded OS to Windows 10 from Windows 11, 
+
+next I downloaded Unity Hub from Unity official website (since the OS just keeps the files NOT keep the application I downloaded in Windows 11)
+
+then I downloaded Unity Editor 2020.3.41f1 (version 2020.3.41f1) from Unity official website
+which its version is higher than 2020.3.28f1.
+
+then I downloaded Unity 2020.3.28f1 package (version 2020.3.28f1) from Unity official website.
+
+Then I do these three things (unordered since I forgot the sequence of things I do)
+
+(1)I want to make Unity Hub shows an options. 
+Thus, I moved the directory ".../Program Files/Unity 2020.3.28f1" into ".../Program Files/Unity/Hub/Unity 2020.3.28f1" 
+which is in same folder to 2020.3.41f1 I downloaded befored.
+
+(2)I created a Unity new empty project with version (2020.3.41f1). Define the new empty project as projectX.
+I tested it, it worked fine.
+
+(3)I copied all files in Assets folder of the Unity_CameraLookAt_Project2 (I created it before) (Unity_CameraLookAt_Project2/Assets/...) 
+to the new empty project (projectX),
+
+I tested it again and it worked fine.
+
+However, at this point, I found it strange.
+
+When I opened the scenes by selecting the "open scene" of menu bar in Unity and selected a scene,
+the scene can be opened without any error.
+But, when I try to open the scene by double clicking the icon of the scene in File Explorer,
+it can NOT be opened.
+Instead, a window popped, saying what app to open the scene.
+When I selected an app, the Windows 10 does NOT accept my selection.
+
+------------------------------------
+I had tried:
+
+After I uninstall the 2020.3.28f1 by double clicking the icon of Uninstall.exe 
+and I reinstall the Unity 2020.3.28f1 package 
+
+then I created a new empty Unity project file. Let's call projectY.
+I copied the files of Assets folder in projectX to projectY.
+
+------------------------------------
+That's solved.
+
+------------------------------------
+Why?
+I think the reason is 
+the path of default apps in Windows 10 is NOT correct.
+
+
+P.S.
+I refer the link and do the second way.
+https://windowsreport.com/cant-change-default-apps/
